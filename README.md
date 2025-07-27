@@ -92,7 +92,7 @@ python inspect_image.py ./data/style_A/image01_img.png --weights ./checkpoints/m
 预期输出:
 脚本会打印出一个详细的报告，告诉你模型为这张图片生成的 embed, pooled embed, 和 attention mask 的形状、数据类型和所在设备。
 
-##　功能 3.3 (进阶): 在其他项目中使用工具函数
+## 功能 3.3 (进阶): 在其他项目中使用工具函数
 `multimodal_utils.py` 文件为提供了未来将此编码器集成到LLM项目中的核心“零件”。
 
 使用场景: 当开始构建VLM（视觉语言模型）时。
