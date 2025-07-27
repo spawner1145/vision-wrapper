@@ -1,5 +1,3 @@
-# style_comparator.py
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -71,7 +69,7 @@ def main():
 
     similarity = F.cosine_similarity(style_vec1, style_vec2).item()
     
-    print("\n--- 风格相似度分析结果 ---")
+    print("\n风格相似度分析结果")
     print(f"图片 1: {args.image1}")
     print(f"图片 2: {args.image2}")
     print(f"风格相似度: {similarity:.4f}")

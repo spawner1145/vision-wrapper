@@ -1,5 +1,3 @@
-# inspect_image.py
-
 import torch
 import torch.nn as nn
 from PIL import Image
@@ -67,25 +65,25 @@ def main():
     print("\n" + "="*40 + "\n           模型输出详细信息\n" + "="*40)
     print("\n[1] Embed (序列特征)")
     print("-" * 25)
-    print(f"  - 形状 (Shape): {outputs['embed'].shape}")
-    print(f"  - 数据类型 (dtype): {outputs['embed'].dtype}")
-    print(f"  - 设备 (Device): {outputs['embed'].device}")
+    print(f"形状 (Shape): {outputs['embed'].shape}")
+    print(f"数据类型 (dtype): {outputs['embed'].dtype}")
+    print(f"设备 (Device): {outputs['embed'].device}")
 
     print("\n[2] Pooled Embed (池化/汇总特征)")
     print("-" * 25)
     if outputs['pooled'] is not None:
-        print(f"  - 形状 (Shape): {outputs['pooled'].shape}")
-        print(f"  - 数据类型 (dtype): {outputs['pooled'].dtype}")
-        print(f"  - 设备 (Device): {outputs['pooled'].device}")
+        print(f"形状 (Shape): {outputs['pooled'].shape}")
+        print(f"数据类型 (dtype): {outputs['pooled'].dtype}")
+        print(f"设备 (Device): {outputs['pooled'].device}")
     else:
-        print("  - 未生成 (模型可能配置为忽略此项)")
+        print("未生成 (模型可能配置为忽略此项)")
 
     print("\n[3] Attention Mask (注意力遮罩)")
     print("-" * 25)
-    print(f"  - 形状 (Shape): {outputs['mask'].shape}")
-    print(f"  - 数据类型 (dtype): {outputs['mask'].dtype}")
-    print(f"  - 设备 (Device): {outputs['mask'].device}")
-    print(f"  - (此mask是根据embed形状生成的，全为1)")
+    print(f"形状 (Shape): {outputs['mask'].shape}")
+    print(f"数据类型 (dtype): {outputs['mask'].dtype}")
+    print(f"设备 (Device): {outputs['mask'].device}")
+    print(f"(此mask是根据embed形状生成的，全为1)")
     print("\n" + "="*40)
 
 if __name__ == '__main__':

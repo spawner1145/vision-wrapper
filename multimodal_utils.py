@@ -1,5 +1,3 @@
-# multimodal_utils.py
-
 import torch
 import torch.nn as nn
 
@@ -21,18 +19,18 @@ def create_attention_mask_from_embed(embed_sequence: torch.Tensor) -> torch.Tens
 
 if __name__ == '__main__':
     BATCH_SIZE, SEQ_LENGTH, VISION_DIM, LLM_DIM = 4, 50, 768, 4096
-    print("--- Testing Pooled Embed Projection ---")
+    print("Testing Pooled Embed Projection")
     dummy_pooled_embed = torch.randn(BATCH_SIZE, VISION_DIM)
     pooled_projector = nn.Linear(VISION_DIM, LLM_DIM)
     projected_pooled = project_pooled_embed(dummy_pooled_embed, pooled_projector)
     print(f"Source shape: {dummy_pooled_embed.shape}, Projected shape: {projected_pooled.shape}\n")
 
-    print("--- Testing Sequence Embed Projection ---")
+    print("Testing Sequence Embed Projection")
     dummy_sequence_embed = torch.randn(BATCH_SIZE, SEQ_LENGTH, VISION_DIM)
     sequence_projector = nn.Linear(VISION_DIM, LLM_DIM)
     projected_sequence = project_sequence_embed(dummy_sequence_embed, sequence_projector)
     print(f"Source shape: {dummy_sequence_embed.shape}, Projected shape: {projected_sequence.shape}\n")
 
-    print("--- Testing Attention Mask Creation ---")
+    print("Testing Attention Mask Creation")
     attention_mask = create_attention_mask_from_embed(projected_sequence)
     print(f"Source embed shape: {projected_sequence.shape}, Created mask shape: {attention_mask.shape}")

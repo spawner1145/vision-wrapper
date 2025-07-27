@@ -1,5 +1,3 @@
-# dataset.py
-
 from pathlib import Path
 import torch
 from torch.utils.data import Dataset
@@ -16,7 +14,7 @@ class StyleDataset(Dataset):
         self.style_map = {}
 
         if not self.root_dir.exists():
-            print(f"警告：数据集目录 {self.root_dir} 不存在。")
+            print(f"警告：数据集目录 {self.root_dir} 不存在")
             return
             
         style_dirs = [d for d in self.root_dir.iterdir() if d.is_dir()]
