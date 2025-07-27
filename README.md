@@ -98,9 +98,7 @@ python inspect_image.py ./data/style_A/image01_img.png --weights ./checkpoints/m
 使用场景: 当开始构建VLM（视觉语言模型）时。
 
 如何使用: 在VLM代码中，可以像这样导入和使用这些函数：
-```
-Python
-
+```python
 from multimodal_utils import project_sequence_embed, create_attention_mask_from_embed
 
 # ... 加载视觉编码器和LLM ...
