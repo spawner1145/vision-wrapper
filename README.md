@@ -82,9 +82,8 @@ python style_comparator.py ./data/style_A/image01_img.png ./data/style_B/image03
 
 使用脚本: `inspect_image.py`
 
-命令格式:
-
 `python inspect_image.py <图片路径> --weights <你的模型权重路径>`
+
 示例:
 ```
 python inspect_image.py ./data/style_A/image01_img.png --weights ./checkpoints/model_epoch_50.pth
