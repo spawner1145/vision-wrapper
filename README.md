@@ -7,6 +7,8 @@
 │   ├── style_A/
 │   │   ├── image01_img.png
 │   │   ├── image01_embed.pt
+│   │   ├── image01_pooled.pt
+│   │   ├── image01_mask.pt
 │   │   └── ...
 │   └── style_B/
 │       └── ...
